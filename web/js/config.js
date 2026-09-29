@@ -179,13 +179,13 @@ export function setMetadataAlbumReview(v){ setSetting("tiddl_meta_album_review",
 
 // ─── Cover art settings ───────────────────────────────────────────────────────
 
-export function getCoverSave()           { return getSetting("tiddl_cover_save", "false") === "true"; }
+export function getCoverSave()           { return getSetting("tiddl_cover_save", "true") === "true"; }
 export function setCoverSave(v)          { setSetting("tiddl_cover_save", v ? "true" : "false"); }
 
 export function getCoverSize()           { return parseInt(getSetting("tiddl_cover_size", "1280"), 10); }
 export function setCoverSize(v)          { setSetting("tiddl_cover_size", v); }
 
-export function getCoverAllowed()        { return JSON.parse(getSetting("tiddl_cover_allowed", "[]")); }
+export function getCoverAllowed()        { return JSON.parse(getSetting("tiddl_cover_allowed", '["album"]')); }
 export function setCoverAllowed(v)       { setSetting("tiddl_cover_allowed", JSON.stringify(v)); }
 
 // ─── M3U settings ─────────────────────────────────────────────────────────────
