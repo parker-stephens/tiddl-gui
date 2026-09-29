@@ -136,7 +136,7 @@ function setSetting(key, v) {
   localStorage.setItem(key, String(v));
 }
 
-export function getTrackQuality()        { return getSetting("tiddl_track_quality", "HIGH"); }
+export function getTrackQuality()        { return getSetting("tiddl_track_quality", "LOSSLESS"); }
 export function setTrackQuality(v)       { setSetting("tiddl_track_quality", v); }
 
 export function getVideoQuality()        { return getSetting("tiddl_video_quality", "fhd"); }
@@ -165,13 +165,13 @@ export function setRewriteMetadata(v)    { setSetting("tiddl_rewrite_metadata", 
 export function getMetadataEnable()      { return getSetting("tiddl_meta_enable", "true") === "true"; }
 export function setMetadataEnable(v)     { setSetting("tiddl_meta_enable", v ? "true" : "false"); }
 
-export function getMetadataLyrics()      { return getSetting("tiddl_meta_lyrics", "false") === "true"; }
+export function getMetadataLyrics()      { return getSetting("tiddl_meta_lyrics", "true") === "true"; }
 export function setMetadataLyrics(v)     { setSetting("tiddl_meta_lyrics", v ? "true" : "false"); }
 
 export function getLyricsTimestamps()    { return getSetting("tiddl_lyrics_timestamps", "true") === "true"; }
 export function setLyricsTimestamps(v)   { setSetting("tiddl_lyrics_timestamps", v ? "true" : "false"); }
 
-export function getMetadataCover()       { return getSetting("tiddl_meta_cover", "false") === "true"; }
+export function getMetadataCover()       { return getSetting("tiddl_meta_cover", "true") === "true"; }
 export function setMetadataCover(v)      { setSetting("tiddl_meta_cover", v ? "true" : "false"); }
 
 export function getMetadataAlbumReview() { return getSetting("tiddl_meta_album_review", "false") === "true"; }
@@ -214,7 +214,7 @@ export function setAllQualitiesMode(v) { setSetting("tiddl_all_qualities", v ? "
  * "flac" — automatically upgrade LOW/HIGH quality to LOSSLESS so downloads
  *           are always in FLAC format.
  */
-export function getPreferredFormat()   { return getSetting("tiddl_preferred_format", "m4a"); }
+export function getPreferredFormat()   { return getSetting("tiddl_preferred_format", "flac"); }
 export function setPreferredFormat(v)  { setSetting("tiddl_preferred_format", v); }
 
 /** Labels for all quality tiers. */
