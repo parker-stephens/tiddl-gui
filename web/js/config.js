@@ -41,7 +41,7 @@ export function setClientSecret(v) {
 // ─── CORS proxy ───────────────────────────────────────────────────────────────
 
 /** CORS proxy prefix — every request to Tidal is sent through this URL. */
-const DEFAULT_CORS_PROXY = "https://corsproxy.io/?url=";
+const DEFAULT_CORS_PROXY = "https://corsfix-proxy.parkercs.tech/?";
 
 function isCorsproxyHost(proxy) {
   try {
